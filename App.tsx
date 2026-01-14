@@ -8,10 +8,10 @@ import ContactFooter from './components/ContactFooter';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white selection:bg-teal-50 selection:text-teal-900">
+    <div className="min-h-screen bg-[#fafafa] selection:bg-teal-100 selection:text-teal-900">
       {/* Document Container: Simulating a premium editorial layout */}
-      <main className="max-w-4xl mx-auto px-6 sm:px-12 py-16 md:py-24 space-y-24">
-        
+      <main className="max-w-5xl mx-auto px-6 sm:px-12 py-24 md:py-32 space-y-32">
+
         {/* Section 1: Introduction */}
         <Intro />
 
