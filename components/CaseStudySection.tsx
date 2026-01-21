@@ -53,7 +53,7 @@ const BlogMockupItem = ({
   //     </div>
   //   </div>
   // </div>
-  <img src="assets/funadiq.jpeg" alt="" />
+  <img src="/assets/funadiq.jpeg" alt="" />
 );
 
 const WebsiteMockupItem = ({ brandColor = "#1e3a8a", title, p1, p2 }: { brandColor?: string, title: string, p1: string, p2: string }) => (
@@ -69,7 +69,7 @@ const WebsiteMockupItem = ({ brandColor = "#1e3a8a", title, p1, p2 }: { brandCol
 );
 
 const NojomMockup = () => (
-  <img src="assets/nojom.jpeg" alt="" />
+  <img src="/assets/nojom.jpeg" alt="" />
 );
 
 const EBSMockup = () => (
