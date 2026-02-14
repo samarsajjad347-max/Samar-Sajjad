@@ -3,11 +3,12 @@ import React from 'react';
 
 const ExperienceSnapshot: React.FC = () => {
   const brands = [
-    "Funadiq (Global)",
-    "Umrah Companions (Global)",
-    "Nojom Al Tamam (UAE Property Services)",
-    "Expert Bills Saver (UK Utility Services)"
-  ];
+  "Funadiq (Global)",
+  "Umrah Companions (Global)",
+  "Zindigi App (Digital Payments)",
+  "Nojom Al Tamam (UAE Property Services)",
+  "Expert Bills Saver (UK Utility Services)"
+];
   const focus = ["SEO Blogs", "Website Copy", "Social Media Strategy"];
 
   return (
@@ -32,8 +33,38 @@ const ExperienceSnapshot: React.FC = () => {
           <ul className="text-sm text-slate-600 space-y-1">
             {focus.map(f => <li key={f}>{f}</li>)}
           </ul>
-        </div>
-      </div>
+        {/* Zindigi App Section */}
+<div className="space-y-6 mt-8">
+  <h3 className="text-xs font-bold uppercase tracking-widest text-purple-500">
+    Zindigi App Project
+  </h3>
+
+  <div>
+    <p className="text-xl font-bold text-slate-900">
+      Content & Campaign Strategy — Zindigi (Digital Payments App)
+    </p>
+
+    <p className="text-slate-500 mt-2">
+      Contributed to digital campaign messaging, app-focused content strategy,
+      and user-centered communication to improve engagement, clarity, and brand positioning
+      in the fintech space.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <img
+      src="/assets/zindigi-1.png"
+      alt="Zindigi App Screenshot 1"
+      className="w-full rounded-xl border border-slate-200"
+    />
+    <img
+      src="/assets/zindigi-2.png"
+      alt="Zindigi App Screenshot 2"
+      className="w-full rounded-xl border border-slate-200"
+    />
+  </div>
+</div>
+
     </section>
   );
 };
