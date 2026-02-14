@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Image as ImageIcon, Users, Puzzle, TrendingUp, RefreshCcw, ArrowRight, Play, Instagram, MapPin, MousePointer2, MessageSquare, Heart } from 'lucide-react';
+import { Image as ImageIcon, Users, Puzzle, TrendingUp, RefreshCcw, ArrowRight } from 'lucide-react';
 
 interface CaseStudyProps {
   number: string;
@@ -27,32 +26,6 @@ const BlogMockupItem = ({
   bannerSubtext?: string,
   bannerColor?: string
 }) => (
-  // <div className="flex flex-col sm:flex-row gap-4 p-4 bg-white border border-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-  //   <div className="w-full sm:w-2/5 aspect-[16/10] rounded overflow-hidden relative shrink-0 border border-slate-100 flex flex-col" style={{ backgroundColor: bannerColor }}>
-  //     <div className="absolute top-2 left-2 flex items-center gap-1">
-  //       <div className="w-4 h-4 bg-red-600 rounded-sm flex items-center justify-center text-[6px] text-white font-bold">ف</div>
-  //       <span className="text-[8px] font-bold text-slate-800 uppercase tracking-tighter">Funadiq</span>
-  //     </div>
-  //     <div className="mt-auto p-3 space-y-1 bg-white/40 backdrop-blur-[1px]">
-  //       <p className="text-[7px] font-bold text-slate-600 uppercase tracking-tighter">{bannerSubtext}</p>
-  //       <p className="text-[10px] font-black text-slate-900 leading-none uppercase tracking-tighter drop-shadow-sm">
-  //         {bannerText}
-  //       </p>
-  //     </div>
-  //   </div>
-  //   <div className="flex-1 flex flex-col justify-between py-1 text-left">
-  //     <div className="space-y-1">
-  //       <h4 className="text-sm font-bold text-[#1e3a8a] leading-tight line-clamp-2">{title}</h4>
-  //       <p className="text-[10px] text-slate-500 line-clamp-3 leading-relaxed">{excerpt}</p>
-  //     </div>
-  //     <div className="flex justify-between items-end mt-4">
-  //       <span className="text-[9px] font-medium text-slate-400">{date}</span>
-  //       <div className="px-4 py-1.5 bg-[#be185d] text-white text-[9px] font-bold rounded-md hover:bg-[#9d174d] transition-colors cursor-default">
-  //         Read More
-  //       </div>
-  //     </div>
-  //   </div>
-  // </div>
   <img src="/assets/funadiq.jpeg" alt="" />
 );
 
@@ -103,7 +76,7 @@ const EBSMockup = () => (
         <div className="space-y-1">
           <RefreshCcw className="w-5 h-5 mb-2 opacity-80" />
           <h5 className="text-[10px] font-bold">End-to-End Service</h5>
-          <p className="text-[7px] text-slate-400 tertiary text-slate-400 leading-snug">From sourcing the right suppliers to managing the process, we handle everything without disruption.</p>
+          <p className="text-[7px] text-slate-400 leading-snug">From sourcing the right suppliers to managing the process, we handle everything without disruption.</p>
         </div>
       </div>
     </div>
@@ -111,8 +84,26 @@ const EBSMockup = () => (
 );
 
 const SocialMediaGrid = () => (
-  <div className="wfull gap-3 p-3 rounded-2xl ">
-    <img src="assets/social.jpeg" alt="" />
+  <div className="w-full gap-3 p-3 rounded-2xl">
+    <img src="/assets/social.jpeg" alt="" />
+  </div>
+);
+
+/** ✅ NEW: Zindigi mockup (uses the images you uploaded) */
+const ZindigiMockup = () => (
+  <div className="grid grid-cols-2 gap-4">
+    <img
+      src="/assets/zindigi-1.png"
+      alt="Zindigi App Screenshot 1"
+      className="w-full rounded-xl border border-slate-200 shadow-sm"
+      loading="lazy"
+    />
+    <img
+      src="/assets/zindigi-2.png"
+      alt="Zindigi App Screenshot 2"
+      className="w-full rounded-xl border border-slate-200 shadow-sm"
+      loading="lazy"
+    />
   </div>
 );
 
@@ -135,13 +126,23 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ number, title, goal, work, focusP
             <div>
               <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Work Included</h4>
               <ul className="text-sm text-slate-600 space-y-2">
-                {work.map((w, i) => <li key={i} className="flex items-center gap-2 text-left"><span className="w-1 h-1 bg-slate-300 rounded-full shrink-0"></span>{w}</li>)}
+                {work.map((w, i) => (
+                  <li key={i} className="flex items-center gap-2 text-left">
+                    <span className="w-1 h-1 bg-slate-300 rounded-full shrink-0"></span>
+                    {w}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Strategic Focus</h4>
               <ul className="text-sm text-slate-600 space-y-2">
-                {focusPoints.map((f, i) => <li key={i} className="flex items-center gap-2 text-left"><span className="w-1 h-1 bg-teal-400 rounded-full shrink-0"></span>{f}</li>)}
+                {focusPoints.map((f, i) => (
+                  <li key={i} className="flex items-center gap-2 text-left">
+                    <span className="w-1 h-1 bg-teal-400 rounded-full shrink-0"></span>
+                    {f}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -237,6 +238,21 @@ const CaseStudySection: React.FC = () => {
       focusPoints: ["Platform Adaptation", "Narrative Consistency", "AI-Human Hybrid Content"],
       imageLabel: "Social Media Campaign Visuals",
       visual: <SocialMediaGrid />
+    },
+
+    /** ✅ NEW: Zindigi case study */
+    {
+      number: "Case Study 06",
+      title: "App Content (Zindigi — Digital Payments)",
+      goal: "Support fintech messaging by creating clear, user-first content and campaign copy that improves trust, engagement, and feature understanding across app journeys.",
+      work: ["Campaign Messaging", "Feature/UX Copy Support", "Content Structuring"],
+      focusPoints: ["Clarity & Trust", "User Intent", "Fintech Tone"],
+      imageLabel: "Zindigi App Screens",
+      visual: (
+        <div className="p-2">
+          <ZindigiMockup />
+        </div>
+      )
     }
   ];
 
