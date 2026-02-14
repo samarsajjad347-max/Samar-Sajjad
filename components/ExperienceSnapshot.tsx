@@ -3,12 +3,12 @@ import React from 'react';
 
 const ExperienceSnapshot: React.FC = () => {
   const brands = [
-  "Funadiq (Global)",
-  "Umrah Companions (Global)",
-  "Zindigi App (Digital Payments)",
-  "Nojom Al Tamam (UAE Property Services)",
-  "Expert Bills Saver (UK Utility Services)"
-];
+    "Funadiq (Global)",
+    "Umrah Companions (Global)",
+    "Zindigi App (Digital Payments)",
+    "Nojom Al Tamam (UAE Property Services)",
+    "Expert Bills Saver (UK Utility Services)",
+  ];
   const focus = ["SEO Blogs", "Website Copy", "Social Media Strategy"];
 
   return (
@@ -33,55 +33,53 @@ const ExperienceSnapshot: React.FC = () => {
           <ul className="text-sm text-slate-600 space-y-1">
             {focus.map(f => <li key={f}>{f}</li>)}
           </ul>
-        {/* Zindigi App Section */}
-{/* Zindigi App Section */}
-<div className="mt-12">
-  <h3 className="text-xs font-bold uppercase tracking-widest text-purple-500 mb-6">
-    Zindigi App Project
-  </h3>
+        </div>
+      </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      {/* Zindigi App Section */}
+      <div className="mt-12 md:col-span-2">
+        <h3 className="text-xs font-bold uppercase tracking-widest text-purple-500 mb-6">
+          Zindigi App Project
+        </h3>
 
-    {/* LEFT SIDE - TEXT */}
-    <div>
-      <p className="text-xl font-bold text-slate-900">
-        Content & Campaign Strategy — Zindigi (Digital Payments App)
-      </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="text-xl font-bold text-slate-900">
+              Content & Campaign Strategy — Zindigi (Digital Payments App)
+            </p>
 
-      <p className="text-slate-500 mt-3">
-        Contributed to digital campaign messaging, app-focused content strategy,
-        and user-centered communication to improve engagement, clarity,
-        and brand positioning in the fintech space.
-      </p>
+            <p className="text-slate-500 mt-3">
+              Contributed to digital campaign messaging, app-focused content strategy,
+              and user-centered communication to improve engagement, clarity,
+              and brand positioning in the fintech space.
+            </p>
 
-      <ul className="mt-4 space-y-2 text-sm text-slate-600">
-        <li>• Created app-focused marketing copy</li>
-        <li>• Supported digital campaigns</li>
-        <li>• Improved user communication flows</li>
-        <li>• Strengthened fintech brand positioning</li>
-      </ul>
-    </div>
+            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+              <li>• Created app-focused marketing copy</li>
+              <li>• Supported digital campaigns</li>
+              <li>• Improved user communication flows</li>
+              <li>• Strengthened fintech brand positioning</li>
+            </ul>
+          </div>
 
-    {/* RIGHT SIDE - IMAGES */}
-    <div className="grid grid-cols-2 gap-4">
-      <img
-        src="/assets/zindigi-1.png"
-        alt="Zindigi App Screenshot 1"
-        className="w-full rounded-xl border border-slate-200 shadow-sm"
-        loading="lazy"
-      />
-      <img
-        src="/assets/zindigi-2.png"
-        alt="Zindigi App Screenshot 2"
-        className="w-full rounded-xl border border-slate-200 shadow-sm"
-        loading="lazy"
-      />
-      </div>      // closes RIGHT SIDE - IMAGES
-  </div>        // closes grid (left + right)
-</div>          // closes mt-12 container
-</section>
-);
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="/assets/zindigi-1.png"
+              alt="Zindigi App Screenshot 1"
+              className="w-full rounded-xl border border-slate-200 shadow-sm"
+              loading="lazy"
+            />
+            <img
+              src="/assets/zindigi-2.png"
+              alt="Zindigi App Screenshot 2"
+              className="w-full rounded-xl border border-slate-200 shadow-sm"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ExperienceSnapshot;
-

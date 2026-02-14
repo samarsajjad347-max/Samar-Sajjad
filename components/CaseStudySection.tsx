@@ -93,13 +93,13 @@ const SocialMediaGrid = () => (
 const ZindigiMockup = () => (
   <div className="grid grid-cols-2 gap-4">
     <img
-      src="/assets/zindigi-1.png"
+      src="/assets/Image1.jpeg"
       alt="Zindigi App Screenshot 1"
       className="w-full rounded-xl border border-slate-200 shadow-sm"
       loading="lazy"
     />
     <img
-      src="/assets/zindigi-2.png"
+      src="/assets/Image2.jpeg"
       alt="Zindigi App Screenshot 2"
       className="w-full rounded-xl border border-slate-200 shadow-sm"
       loading="lazy"
@@ -244,7 +244,7 @@ const CaseStudySection: React.FC = () => {
     {
       number: "Case Study 06",
       title: "App Content (Zindigi — Digital Payments)",
-      goal: "Support fintech messaging by creating clear, user-first content and campaign copy that improves trust, engagement, and feature understanding across app journeys.",
+      goal: "Developed comprehensive digital content for the Umrah services on the Zindigi App, a strategic collaboration between Funadiq and Zindigi (JS Bank) to digitize the pilgrimage experience.",
       work: ["Campaign Messaging", "Feature/UX Copy Support", "Content Structuring"],
       focusPoints: ["Clarity & Trust", "User Intent", "Fintech Tone"],
       imageLabel: "Zindigi App Screens",
